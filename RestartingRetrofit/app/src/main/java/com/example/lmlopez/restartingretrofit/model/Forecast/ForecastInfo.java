@@ -1,0 +1,76 @@
+
+package com.example.lmlopez.restartingretrofit.model.Forecast;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class ForecastInfo {
+
+    @SerializedName("cod")
+    @Expose
+    private String cod;
+    @SerializedName("message")
+    @Expose
+    private Double message;
+    @SerializedName("cnt")
+    @Expose
+    private Long cnt;
+    @SerializedName("list")
+    @Expose
+    private java.util.List<com.example.lmlopez.retrofit.model.List> list = null;
+
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public ForecastInfo() {
+    }
+
+    /**
+     * 
+     * @param message
+     * @param cnt
+     * @param cod
+     * @param list
+     */
+    public ForecastInfo(String cod, Double message, Long cnt, java.util.List<com.example.lmlopez.retrofit.model.List> list) {
+        super();
+        this.cod = cod;
+        this.message = message;
+        this.cnt = cnt;
+        this.list = list;
+    }
+
+    public String getCod() {
+        return cod;
+    }
+
+    public void setCod(String cod) {
+        this.cod = cod;
+    }
+
+    public Double getMessage() {
+        return message;
+    }
+
+    public void setMessage(Double message) {
+        this.message = message;
+    }
+
+    public Long getCnt() {
+        return cnt;
+    }
+
+    public void setCnt(Long cnt) {
+        this.cnt = cnt;
+    }
+
+    public java.util.List<com.example.lmlopez.retrofit.model.List> getList() {
+        return list;
+    }
+
+    public void setList(java.util.List<com.example.lmlopez.retrofit.model.List> list) {
+        this.list = list;
+    }
+
+}
