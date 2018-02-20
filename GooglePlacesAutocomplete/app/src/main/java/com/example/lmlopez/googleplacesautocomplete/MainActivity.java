@@ -7,11 +7,9 @@ import android.widget.AutoCompleteTextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    AutoCompleteTextView autoCompleteTextView;
+    DelayAutoCompleteTextView autoCompleteTextView;
 
-    private static final String[] COUNTRIES = new String[] {
-            "Belgium", "France", "Italy", "Germany", "Spain", "Argelia", "Argentina"
-    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, COUNTRIES);
-
-        autoCompleteTextView.setAdapter(adapter);
-
-
-
-        //autoCompleteTextView
+        autoCompleteTextView.setAdapter(new GooglePlacesResultAdapter(MainActivity.this));
 
 
     }

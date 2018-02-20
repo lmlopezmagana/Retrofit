@@ -31,6 +31,11 @@ public class GooglePlacesResultAdapter extends BaseAdapter
     private List<Prediction> resultList = new ArrayList<Prediction>();
 
 
+    public GooglePlacesResultAdapter(Context _context) {
+        this.mContext = _context;
+    }
+
+
     @Override
     public int getCount() {
         return resultList.size();
@@ -94,7 +99,12 @@ public class GooglePlacesResultAdapter extends BaseAdapter
 
             @Override
             protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-
+                if (filterResults != null && filterResults.count > 0) {
+                    resultList = (List<Prediction>) filterResults.values;
+                    notifyDataSetChanged();
+                } else {
+                    notifyDataSetInvalidated();
+                }
             }
         };
     }

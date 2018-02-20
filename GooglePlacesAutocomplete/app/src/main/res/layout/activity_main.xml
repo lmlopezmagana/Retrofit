@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.lmlopez.googleplacesautocomplete.MainActivity">
 
-    <AutoCompleteTextView
+    <com.example.lmlopez.googleplacesautocomplete.DelayAutoCompleteTextView
         android:id="@+id/autoCompleteTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
