@@ -4,6 +4,8 @@ package com.example.lmlopez.restartingretrofit.model.Forecast;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class ForecastInfo {
 
     @SerializedName("cod")
@@ -17,7 +19,7 @@ public class ForecastInfo {
     private Long cnt;
     @SerializedName("list")
     @Expose
-    private java.util.List<com.example.lmlopez.retrofit.model.List> list = null;
+    private List<WeatherList> list = null;
 
     /**
      * No args constructor for use in serialization
@@ -33,7 +35,7 @@ public class ForecastInfo {
      * @param cod
      * @param list
      */
-    public ForecastInfo(String cod, Double message, Long cnt, java.util.List<com.example.lmlopez.retrofit.model.List> list) {
+    public ForecastInfo(String cod, Double message, Long cnt, List<WeatherList> list) {
         super();
         this.cod = cod;
         this.message = message;
@@ -65,11 +67,11 @@ public class ForecastInfo {
         this.cnt = cnt;
     }
 
-    public java.util.List<com.example.lmlopez.retrofit.model.List> getList() {
+    public List<WeatherList> getList() {
         return list;
     }
 
-    public void setList(java.util.List<com.example.lmlopez.retrofit.model.List> list) {
+    public void setList(List<WeatherList> list) {
         this.list = list;
     }
 

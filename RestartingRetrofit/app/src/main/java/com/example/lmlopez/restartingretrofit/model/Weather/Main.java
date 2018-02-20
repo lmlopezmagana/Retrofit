@@ -11,16 +11,16 @@ public class Main {
     private Double temp;
     @SerializedName("pressure")
     @Expose
-    private Long pressure;
+    private Double pressure;
     @SerializedName("humidity")
     @Expose
-    private Long humidity;
+    private Double humidity;
     @SerializedName("temp_min")
     @Expose
-    private Long tempMin;
+    private Double tempMin;
     @SerializedName("temp_max")
     @Expose
-    private Long tempMax;
+    private Double tempMax;
 
     /**
      * No args constructor for use in serialization
@@ -37,7 +37,7 @@ public class Main {
      * @param temp
      * @param tempMin
      */
-    public Main(Double temp, Long pressure, Long humidity, Long tempMin, Long tempMax) {
+    public Main(Double temp, Double pressure, Double humidity, Double tempMin, Double tempMax) {
         super();
         this.temp = temp;
         this.pressure = pressure;
@@ -54,35 +54,35 @@ public class Main {
         this.temp = temp;
     }
 
-    public Long getPressure() {
+    public Double getPressure() {
         return pressure;
     }
 
-    public void setPressure(Long pressure) {
+    public void setPressure(Double pressure) {
         this.pressure = pressure;
     }
 
-    public Long getHumidity() {
+    public Double getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(Long humidity) {
+    public void setHumidity(Double humidity) {
         this.humidity = humidity;
     }
 
-    public Long getTempMin() {
+    public Double getTempMin() {
         return tempMin;
     }
 
-    public void setTempMin(Long tempMin) {
+    public void setTempMin(Double tempMin) {
         this.tempMin = tempMin;
     }
 
-    public Long getTempMax() {
+    public Double getTempMax() {
         return tempMax;
     }
 
-    public void setTempMax(Long tempMax) {
+    public void setTempMax(Double tempMax) {
         this.tempMax = tempMax;
     }
 
