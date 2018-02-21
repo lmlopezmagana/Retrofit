@@ -1,4 +1,4 @@
-package com.example.lmlopez.googleplacesautocomplete.model;
+package com.example.lmlopez.googleplacesautocomplete.model.prediction;
 
 import java.util.List;
 

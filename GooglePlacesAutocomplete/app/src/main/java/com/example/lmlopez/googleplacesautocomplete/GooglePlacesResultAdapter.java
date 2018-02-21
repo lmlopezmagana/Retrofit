@@ -9,8 +9,9 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
-import com.example.lmlopez.googleplacesautocomplete.model.Prediction;
-import com.example.lmlopez.googleplacesautocomplete.model.PredictionResult;
+
+import com.example.lmlopez.googleplacesautocomplete.model.prediction.Prediction;
+import com.example.lmlopez.googleplacesautocomplete.model.prediction.PredictionResult;
 
 import java.io.IOException;
 import java.util.ArrayList;

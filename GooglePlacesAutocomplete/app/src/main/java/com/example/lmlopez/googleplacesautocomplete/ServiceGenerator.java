@@ -48,8 +48,8 @@ public class ServiceGenerator {
                     HttpUrl url = originalHttpUrl.newBuilder()
                             //.addEncodedPathSegments("maps/api/place")
                             .addQueryParameter("key", "AIzaSyD_FMG1EnTUm3Ja7bSnlCV2VINLFq7rLMw")
-                            .addQueryParameter("language", "es")
-                            .addQueryParameter("type", "(cities)")
+                            //.addQueryParameter("language", "es")
+                            //.addQueryParameter("type", "(cities)")
                             .build();
 
                     // Request customization: add request headers
