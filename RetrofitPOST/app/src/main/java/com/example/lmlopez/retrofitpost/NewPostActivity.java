@@ -16,6 +16,7 @@ import com.example.lmlopez.retrofitpost.model.Post;
 import java.io.IOException;
 
 import retrofit2.Call;
+import retrofit2.Callback;
 import retrofit2.Response;
 
 public class NewPostActivity extends AppCompatActivity {
@@ -45,7 +46,24 @@ public class NewPostActivity extends AppCompatActivity {
                 newPost.setTitle(title.getText().toString());
                 newPost.setBody(body.getText().toString());
 
-                new NewPostAsyncTask().execute(newPost);
+                //new NewPostAsyncTask().execute(newPost);
+                JSONPlaceholderAPI api = ServiceGenerator.createService(JSONPlaceholderAPI.class);
+
+                Call<Post> call = api.sendPost(newPost);
+
+                call.enqueue(new Callback<Post>() {
+                    @Override
+                    public void onResponse(Call<Post> call, Response<Post> response) {
+                        if (response.isSuccessful()) {
+                            finish();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Post> call, Throwable t) {
+
+                    }
+                });
 
 
 
@@ -56,7 +74,7 @@ public class NewPostActivity extends AppCompatActivity {
 
     }
 
-    private class NewPostAsyncTask extends AsyncTask<Post, Void, Post> {
+    /*private class NewPostAsyncTask extends AsyncTask<Post, Void, Post> {
 
         ProgressDialog pd;
 
@@ -110,7 +128,7 @@ public class NewPostActivity extends AppCompatActivity {
         }
 
 
-    }
+    }*/
 
 
 }
